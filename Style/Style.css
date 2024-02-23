@@ -83,7 +83,7 @@ section .title::after{
 /* navbar styling */
 .navbar{
     position: fixed;
-    width: 99%;
+    width: 100%;
     z-index: 999;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -1241,4 +1241,110 @@ footer .wave#wave4
         font-size: 23px;
         line-height: 38px;
     }
+}
+
+
+
+
+:root {
+    --card-height: 400px;
+    --card-width: calc(var(--card-height) / 1.5);
+}
+.cardNew {
+    border-radius: 20px;
+    width: var(--card-width);
+    height: var(--card-height);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 36px;
+    perspective: 2500px;
+    margin: 0 50px;
+}
+
+.cover-image {
+    opacity: 0.6;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wrapperNew {
+    transition: all 0.5s;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.cardNew:hover .wrapperNew {
+    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+.wrapperNew::before,
+.wrapperNew::after {
+    content: "";
+    opacity: 0;
+    width: 100%;
+    height: 80px;
+    transition: all 0.5s;
+    position: absolute;
+    left: 0;
+}
+.wrapperNew::before {
+    top: 0;
+    height: 100%;
+    background-image: linear-gradient(
+            to top,
+            transparent 46%,
+            rgba(12, 13, 19, 0.5) 68%,
+            rgba(12, 13, 19) 97%
+    );
+}
+.wrapperNew::after {
+    bottom: 0;
+    opacity: 1;
+    background-image: linear-gradient(
+            to bottom,
+            transparent 46%,
+            rgba(12, 13, 19, 0.5) 68%,
+            rgba(12, 13, 19) 97%
+    );
+}
+
+.cardNew:hover .wrapperNew::before,
+.wrapperNew::after {
+    opacity: 1;
+}
+
+.cardNew:hover .wrapperNew::after {
+    height: 120px;
+}
+.title {
+    width: 100%;
+    transition: transform 0.5s;
+}
+.cardNew:hover .title {
+    transform: translate3d(0%, -50px, 100px);
+}
+
+.character {
+    width: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    z-index: -1;
+}
+
+.cardNew:hover .character {
+    opacity: 1;
+    transform: translate3d(0%, -30%, 100px);
+}
+.max-width-project {
+    flex-direction: row;
+    display: flex;
 }
