@@ -726,7 +726,8 @@ section .title::after{
     height: 100%;
     left: 0;
     top: 0;
-    background: #0073e3;
+    background: rgb(0,85,254);
+    background: linear-gradient(45deg, rgba(0,85,254,1) 0%, rgba(0,129,255,1) 50%, rgba(0,231,255,1) 100%);
 }
 .skills-content .right .html::before{
     width: 90%;
@@ -1262,7 +1263,15 @@ footer .wave#wave4
     perspective: 2500px;
     margin: 0 50px;
 }
-
+@media (max-width: 600px) {
+    .max-width-project {
+        display: flex!important;
+        flex-direction: column!important;
+    }
+    .cardNew {
+        margin-bottom: 20px;
+    }
+}
 .cover-image {
     opacity: 0.6;
     border-radius: 20px;

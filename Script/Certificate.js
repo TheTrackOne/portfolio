@@ -523,4 +523,48 @@ document.addEventListener('DOMContentLoaded', function() {
         certificateCybersecurity.style.display = 'none';
         certificateOther.style.display = 'flex';
     });
+
+
+    function checkScreenWidth() {
+        var mobileScreenWidth = 768;
+
+        if (window.innerWidth <= mobileScreenWidth) {
+            var elementToMoveHTML = document.getElementById("certificate-HTML");
+            var destinationElementHTML = document.getElementById("cardHTML");
+            document.body.appendChild(elementToMoveHTML);
+            destinationElementHTML.parentNode.insertBefore(elementToMoveHTML, destinationElementHTML.nextSibling);
+
+            var elementToMoveCSS = document.getElementById("certificate-CSS");
+            var destinationElementCSS = document.getElementById("cardCSS");
+            document.body.appendChild(elementToMoveCSS);
+            destinationElementCSS.parentNode.insertBefore(elementToMoveCSS, destinationElementCSS.nextSibling);
+
+            var elementToMoveBootstrap = document.getElementById("certificate-Bootstrap");
+            var destinationElementBootstrap = document.getElementById("cardBootstrap");
+            document.body.appendChild(elementToMoveBootstrap);
+            destinationElementBootstrap.parentNode.insertBefore(elementToMoveBootstrap, destinationElementBootstrap.nextSibling);
+
+            var elementToMoveJS = document.getElementById("certificate-JS");
+            var destinationElementJS = document.getElementById("cardJavaScript");
+            document.body.appendChild(elementToMoveJS);
+            destinationElementJS.parentNode.insertBefore(elementToMoveJS, destinationElementJS.nextSibling);
+
+            var elementToMoveTS = document.getElementById("certificate-TS");
+            var destinationElementTS = document.getElementById("cardTS");
+            document.body.appendChild(elementToMoveTS);
+            destinationElementTS.parentNode.insertBefore(elementToMoveTS, destinationElementTS.nextSibling);
+        }
+    }
+    window.addEventListener('load', checkScreenWidth);
+    window.addEventListener('resize', checkScreenWidth);
 });
+
+
+
+
+
+
+
+
+
+
