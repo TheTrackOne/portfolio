@@ -3,14 +3,18 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
 }
 html {
     font-size: 16px;
 }
-
+body{
+    overflow-x: hidden;
+    overflow-y: visible;
+}
 
 #container-new {
-    margin-left: 50px;
+    margin-left: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,3 +117,17 @@ html {
 .certificate-number {
     margin: 10px;
 }
+@media(max-width: 768px) {
+    .certificate-HTML, .certificate-CSS, .certificate-Bootstrap, .certificate-JS, .certificate-TS, .certificate-SQL, .certificate-MySQL, .certificate-Python, .certificate-CPlus, .certificate-Google, .certificate-Microsoft, .certificate-DataBase, .certificate-FrontEnd, .certificate-Crypto, .certificate-Other {
+        flex-direction: row;
+    }
+    .card {
+        flex-direction: row;
+    }
+    #container-new {
+        width: 90%;
+        margin-left: 30px;
+    }
+}
+
+
