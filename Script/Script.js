@@ -42,7 +42,7 @@ $(document).ready(function(){
     });
     var typed = new Typed(".typing-3", {
         strings: ["Connect with me on :)"],
-        typeSpeed: 100,
+        typeSpeed: 140,
         backSpeed: 60,
         loop: true
     });
@@ -77,3 +77,5 @@ $(document).ready(function(){
         }
     });
 });
+
+
