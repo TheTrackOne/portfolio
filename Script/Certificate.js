@@ -553,6 +553,81 @@ document.addEventListener('DOMContentLoaded', function() {
             var destinationElementTS = document.getElementById("cardTS");
             document.body.appendChild(elementToMoveTS);
             destinationElementTS.parentNode.insertBefore(elementToMoveTS, destinationElementTS.nextSibling);
+
+            var elementToMoveSQL = document.getElementById("certificate-SQL");
+            var destinationElementSQL = document.getElementById("cardSQL");
+            document.body.appendChild(elementToMoveSQL);
+            destinationElementSQL.parentNode.insertBefore(elementToMoveSQL, destinationElementSQL.nextSibling);
+
+            var elementToMoveMySQL = document.getElementById("certificate-MySQL");
+            var destinationElementMySQL = document.getElementById("cardMySQL");
+            document.body.appendChild(elementToMoveMySQL);
+            destinationElementMySQL.parentNode.insertBefore(elementToMoveMySQL, destinationElementMySQL.nextSibling);
+
+            var elementToMovePostgreSQL = document.getElementById("certificate-PostgreSQL");
+            var destinationElementPostgreSQL = document.getElementById("cardMyPostgreSQL");
+            document.body.appendChild(elementToMovePostgreSQL);
+            destinationElementPostgreSQL.parentNode.insertBefore(elementToMovePostgreSQL, destinationElementPostgreSQL.nextSibling);
+
+            var elementToMovePython = document.getElementById("certificate-Python");
+            var destinationElementPython = document.getElementById("cardPython");
+            document.body.appendChild(elementToMovePython);
+            destinationElementPython.parentNode.insertBefore(elementToMovePython, destinationElementPython.nextSibling);
+
+            var elementToMoveCPlus = document.getElementById("certificate-CPlus");
+            var destinationElementCPlus = document.getElementById("cardCPlus");
+            document.body.appendChild(elementToMoveCPlus);
+            destinationElementCPlus.parentNode.insertBefore(elementToMoveCPlus, destinationElementCPlus.nextSibling);
+
+            var elementToMoveGoogle = document.getElementById("certificate-Google");
+            var destinationElementGoogle = document.getElementById("cardGoogle");
+            document.body.appendChild(elementToMoveGoogle);
+            destinationElementGoogle.parentNode.insertBefore(elementToMoveGoogle, destinationElementGoogle.nextSibling);
+
+            var elementToMoveMicrosoft = document.getElementById("certificate-Microsoft");
+            var destinationElementMicrosoft = document.getElementById("cardMicrosoft");
+            document.body.appendChild(elementToMoveMicrosoft);
+            destinationElementMicrosoft.parentNode.insertBefore(elementToMoveMicrosoft, destinationElementMicrosoft.nextSibling);
+
+            var elementToMoveDatabase = document.getElementById("certificate-DataBase");
+            var destinationElementDatabase = document.getElementById("cardDataBase");
+            document.body.appendChild(elementToMoveDatabase);
+            destinationElementDatabase.parentNode.insertBefore(elementToMoveDatabase, destinationElementDatabase.nextSibling);
+
+            var elementToMoveFrontEnd = document.getElementById("certificate-FrontEnd");
+            var destinationElementFrontEnd = document.getElementById("cardFrontEnd");
+            document.body.appendChild(elementToMoveFrontEnd);
+            destinationElementFrontEnd.parentNode.insertBefore(elementToMoveFrontEnd, destinationElementFrontEnd.nextSibling);
+
+            var elementToMoveReact = document.getElementById("certificate-React");
+            var destinationElementReact = document.getElementById("cardReact");
+            document.body.appendChild(elementToMoveReact);
+            destinationElementReact.parentNode.insertBefore(elementToMoveReact, destinationElementReact.nextSibling);
+
+            var elementToMoveAngular = document.getElementById("certificate-Angular");
+            var destinationElementAngular = document.getElementById("cardAngular");
+            document.body.appendChild(elementToMoveAngular);
+            destinationElementAngular.parentNode.insertBefore(elementToMoveAngular, destinationElementAngular.nextSibling);
+
+            var elementToMoveWeb = document.getElementById("certificate-Web");
+            var destinationElementWeb = document.getElementById("cardWebDevelopment");
+            document.body.appendChild(elementToMoveWeb);
+            destinationElementWeb.parentNode.insertBefore(elementToMoveWeb, destinationElementWeb.nextSibling);
+
+            var elementToMoveCrypto = document.getElementById("certificate-Crypto");
+            var destinationElementCrypto = document.getElementById("cardCrypto");
+            document.body.appendChild(elementToMoveCrypto);
+            destinationElementCrypto.parentNode.insertBefore(elementToMoveCrypto, destinationElementCrypto.nextSibling);
+
+            var elementToMoveCybersecurity = document.getElementById("certificate-Cybersecurity");
+            var destinationElementCybersecurity = document.getElementById("cardCybersecurity");
+            document.body.appendChild(elementToMoveCybersecurity);
+            destinationElementCybersecurity.parentNode.insertBefore(elementToMoveCybersecurity, destinationElementCybersecurity.nextSibling);
+
+            var elementToMoveOther = document.getElementById("certificate-Other");
+            var destinationElementOther = document.getElementById("cardOther");
+            document.body.appendChild(elementToMoveOther);
+            destinationElementOther.parentNode.insertBefore(elementToMoveOther, destinationElementOther.nextSibling);
         }
     }
     window.addEventListener('load', checkScreenWidth);
