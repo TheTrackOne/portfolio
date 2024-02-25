@@ -59,6 +59,39 @@ section .title{
     padding-bottom: 20px;
     font-family: 'Ubuntu', sans-serif;
 }
+.titleSpecial {
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+section .titleSpecial::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+section .titleSpecial::after{
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: #133aaf;
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+.about .titleSpecial::after {
+    content: none;
+}
 section .title::before{
     content: "";
     position: absolute;
@@ -1356,4 +1389,250 @@ footer .wave#wave4
 .max-width-project {
     flex-direction: row;
     display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.education {
+    --bg-color: #ffd861;
+    --bg-color-light: #ffeeba;
+    --text-color-hover: #4C5656;
+    --box-shadow-color: rgba(255, 215, 97, 0.48);
+}
+
+.credentialing {
+    --bg-color: #B8F9D3;
+    --bg-color-light: #e2fced;
+    --text-color-hover: #4C5656;
+    --box-shadow-color: rgba(184, 249, 211, 0.48);
+}
+
+.wallet {
+    --bg-color: #CEB2FC;
+    --bg-color-light: #F0E7FF;
+    --text-color-hover: #fff;
+    --box-shadow-color: rgba(206, 178, 252, 0.48);
+}
+
+.human-resources {
+    --bg-color: #cbe1ff;
+    --bg-color-light: #f1f7ff;
+    --text-color-hover: #4C5656;
+    --box-shadow-color: rgba(220, 233, 255, 0.48);
+}
+
+.card {
+    width: 240px;
+    height: 341px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 14px 26px rgba(0,0,0,0.04);
+    transition: all 0.3s ease-out;
+    text-decoration: none;
+    border-radius: 20px;
+}
+@media(max-width: 768px){
+    .card {
+        display: none;
+    }
+
+    .card.active {
+        display: block;
+    }
+    #dots {
+        display: block !important;
+        margin-top: 20px !important;
+    }
+
+}
+#dots {
+    display: none;
+}
+.card:hover {
+    transform: translateY(-5px) scale(1.005) translateZ(0);
+    box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+    0 24px 46px var(--box-shadow-color);
+}
+
+.card:hover .overlay {
+    transform: scale(4) translateZ(0);
+}
+
+.card:hover .circle {
+    border-color: var(--bg-color-light);
+    background: var(--bg-color);
+}
+
+.card:hover .circle:after {
+    background: var(--bg-color-light);
+}
+
+.card:hover p {
+    color: var(--text-color-hover);
+}
+
+.card:active {
+    transform: scale(1) translateZ(0);
+    box-shadow: 0 15px 24px rgba(0,0,0,0.11),
+    0 15px 24px var(--box-shadow-color);
+}
+
+.card p {
+    font-size: 17px;
+    color: #4C5656;
+    margin-top: 30px;
+    z-index: 1000;
+    transition: color 0.3s ease-out;
+}
+
+.circle {
+    width: 151px;
+    height: 151px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease-out;
+}
+
+.circle:after {
+    content: "";
+    width: 138px;
+    height: 138px;
+    display: block;
+    position: absolute;
+    background: var(--bg-color);
+    border-radius: 50%;
+    top: 7px;
+    left: 7px;
+    transition: opacity 0.3s ease-out;
+}
+
+.circle svg {
+    z-index: 10000;
+    transform: translateZ(0);
+}
+
+.overlay {
+    width: 138px;
+    position: absolute;
+    height: 138px;
+    border-radius: 50%;
+    background: var(--bg-color);
+    top: 70px;
+    left: 50px;
+    z-index: 0;
+    transition: transform 0.3s ease-out;
+}
+
+
+.provide {
+    background: #111;
+
+}
+.provide-small {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center; /* Центрираме по хоризонтала */
+    align-items: center; /* Центрираме по вертикала */
+}
+
+@media (max-width: 768px) {
+
+    .card {
+        width: 100%;
+        max-width: 280px; /* При нужда ограничаваме максималната ширина */
+        min-height: 400px;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    .circle {
+        width: 171px;
+        height: 171px;
+
+        transform: translate(31%, 57%); /* Центрираме точно по средата */
+    }
+
+    .circle:after {
+        width: 158px;
+        height: 158px;
+        top: 50%; /* Променяме позицията за центриране */
+        left: 50%; /* Променяме позицията за центриране */
+        transform: translate(-48%, -50%); /* Центрираме точно по средата */
+
+    }
+    .card p {
+        font-size: 19px;
+        margin-top: 130px;
+        margin-left: 50px;
+    }
+    #spm {
+        margin-left: 30px !important;
+    }
+    .overlay {
+        width: 158px;
+        position: absolute;
+        height: 158px;
+        border-radius: 50%;
+        background: var(--bg-color);
+        top: 45%; /* Променяме позицията за центриране */
+        left: 50%; /* Променяме позицията за центриране */
+        transform: translate(-50%, -50%); /* Центрираме точно по средата */
+        z-index: 0;
+        transition: transform 0.3s ease-out;
+    }
+}
+
+
+.imageCard {
+    width: 69%;
+    height: auto;
+    z-index: 10;
+    margin: 20px
+}
+@media (max-width: 600px) {
+    .imageCard {
+        margin: 24px;
+    }
+
+}
+
+
+
+
+
+.activeDot {
+    color: red;
 }
