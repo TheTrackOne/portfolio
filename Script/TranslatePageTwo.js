@@ -49,6 +49,8 @@ function setSelectedLocale(locale) {
 
     const cards = document.querySelectorAll(".card-excerpt");
 
+    const copyright = document.getElementById('copyright');
+
     function translateToBulgarian() {
         navbarHome.innerHTML = "Начало";
         navbarAbout.innerHTML = "За мен";
@@ -65,6 +67,8 @@ function setSelectedLocale(locale) {
         cards.forEach(card => {
             card.textContent = "Кликнете тук, за да видите моите сертификати";
         })
+
+        copyright.innerHTML = "Авторско право © 2024 - Всички права запазени || Дизайн от: Кадир Язаджи";
     }
 
     function translateToEnglish() {
@@ -83,6 +87,7 @@ function setSelectedLocale(locale) {
         cards.forEach(card => {
             card.textContent = "Click here to view my certificate";
         })
+        copyright.innerHTML = "Copyright &copy; 2024 - All Rights Reserved || Designed By: Kadir Yazadzhi";
     }
 
     function translateToGerman() {
@@ -101,6 +106,7 @@ function setSelectedLocale(locale) {
         cards.forEach(card => {
             card.textContent = "Hier klicken, um meine Zertifikate anzuzeigen";
         })
+        copyright.innerHTML = "Urheberrecht © 2024 - Alle Rechte vorbehalten || Gestaltet von: Kadir Yazadzhi";
     }
 
     function translateToRussian() {
@@ -119,6 +125,7 @@ function setSelectedLocale(locale) {
         cards.forEach(card => {
             card.textContent = "Нажмите здесь, чтобы просмотреть мои сертификаты";
         })
+        copyright.innerHTML = "Авторские права © 2024 - Все права защищены || Дизайн: Кадир Язаджи";
     }
 
 
